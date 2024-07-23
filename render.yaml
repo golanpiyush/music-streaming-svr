@@ -6,3 +6,4 @@ services:
     runtime: python
     plan: free
     region: oregon
+    healthCheckPath: /health
