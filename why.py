@@ -168,6 +168,11 @@ def get_video_info(video_id):
 def check_connection():
     return jsonify({"status": "Server is up and running"}), 200
 
+@app.route('/health', methods=['GET'])
+def health_check():
+    return jsonify({"status": "healthy"}), 200
+
+
 @app.route('/get_video_info', methods=['GET'])
 def get_video_info_endpoint():
     song_name = request.args.get('q')
